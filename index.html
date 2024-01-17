@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Static Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        main {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width: 700px) { /* Adjust the max-width as needed */
+    .main {
+        width: 100%;
+    }
+}
+        a {
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+        }
+        header {
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            text-shadow: 2px 7px 5px rgba(27, 86, 26, 0.6);
+        }
+        .grid-container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+
+        section {
+            background-color: rgb(116, 218, 243);
+            padding: 20px;
+            color: rgb(18, 58, 5);
+
+        }
+
+        .pics-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .pics-header img {
+            display: flex;
+            height: 10rem;
+            flex-wrap: wrap;
+
+        }
+
+        .neon-border {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px; /* Optional: if you want rounded corners */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.7),
+                0 0 15px rgba(0, 255, 255, 0.7),
+                0 0 25px cyan,
+                0 0 35px cyan;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* Sparkles */
+.neon-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: inherit;
+    filter: blur(5px);
+    opacity: 0;
+    animation: sparkle 3s linear infinite;
+}
+
+.cake-button {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+    border-radius: 7px;
+}
+
+.cake-button:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+.tile {
+    width: 300px; /* Adjust as needed */
+    border-radius: 7px;
+    border: 3px solid #ffffff;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    margin: 20px;
+    overflow: hidden; /* Ensures the image doesn't overflow the tile */
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.tile img {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block; /* Removes bottom margin/whitespace inherent to inline elements */
+} 
+
+@media screen and (max-width: 600px) { /* Adjust the max-width as needed */
+    .tile img {
+        height: 300px;
+    }
+}
+.tile h3 {
+    font-size: 1.2em; /* Adjust as needed */
+    margin: 10px; /* Spacing inside the tile */
+    text-align: center; /* Center-align the headline */
+
+    color: #FFFFFF;
+    background: #0e8dbc;
+}
+.clickable-image {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    cursor: pointer; /* Indicates the image is clickable */
+}
+
+.clickable-image.enlarged {
+    transform: scale(1.5); /* Enlarge the image by 50% */
+    z-index: 10; /* Ensure it's above other content */
+    position: relative; /* Needed for z-index to take effect */
+}
+span {
+    font-size: 4rem;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to "The Half-Century Handbook: A Not-So-Serious Survival Guide for the 50-Something"!</h1>
+        <a class="cake-button" href="cake.png">CLICK HERE TO SEE YOUR BIRTHDAY CAKE</a>
+    </header>
+    <section>
+        <h3>Gefeliciteerd Rob! <span>&#129395;</span> You've hit the big 5-0, a milestone that deserves a standing ovation (and maybe a little sit-down afterward, because let's be honest, standing up for too long can be overrated at this age). This handbook is your go-to guide for navigating the wonderful, wacky world of your 50s – with style, humor, and maybe a touch of sarcasm.</h3>
+        <br>
+        <div class="pics-header">
+            <img  class="neon-border clickable-image" src="pic_1.png" alt="pic1">
+            <img class="neon-border clickable-image" src="pic_2.png" alt="pic2">
+            <img class="neon-border clickable-image" src="pic_3.png" alt="pic3">
+
+        </div>
+    </section>
+    <main class="grid-container">
+        <!-- Repeat this block for 32 times (4x8 grid) -->
+        <div class="grid-item  tile">
+            <a href="article-glasses.html">
+                <img src="searching-glasses.png" alt="Tile Image">
+                <h3>The Art of Forgetting: Where Did I Put My Glasses?</h3>
+            </a>
+        </div>
+        <div class="grid-item  tile">
+            <a href="article-lens.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item  tile">
+            <a href="article-hobby.html">
+                <img src="hobby.png" alt="Tile Image">
+                <h3>Hobbies at 50: Beyond Knitting and Golf</h3>
+            </a>
+        </div>
+        <div class="grid-item  tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <div class="grid-item tile">
+            <a href="detail.html">
+                <img src="glasses.jpeg" alt="Tile Image">
+                <h3>Help - My lens is falling out! How to Fix!</h3>
+            </a>
+        </div>
+        <!-- ... -->
+    </main>
+    <script>
+        document.querySelectorAll('.clickable-image').forEach(image => {
+            image.addEventListener('click', () => {
+                image.classList.toggle('enlarged');
+            });
+        });
+    </script>
+</body>
+</html>
