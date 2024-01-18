@@ -37,6 +37,15 @@
             padding: 1em 0;
             text-shadow: 1px 3px 7px rgba(22, 24, 22, 0.6);
         }
+
+
+        @supports (backdrop-filter: blur(10px)) {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: transparent; /* If you want the background to be blurred */
+  }
+}
         .grid-container {
             display: flex;
             gap: 10px;
@@ -60,6 +69,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
+            flex-wrap: wrap;
 
         }
         .pics-header img {
