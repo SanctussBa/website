@@ -244,11 +244,16 @@ h3 {
     padding: 10px;
 }
 
-.buttons-2 {
+.buttons-2, footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+footer {
+    background-color: #617bd1ab;
+    padding: 20px;
 }
     </style>
 
@@ -359,6 +364,9 @@ h3 {
         </div>
         <!-- ... -->
     </main>
+    <footer>
+        <img src="youre-how-old-dogs.gif" alt="dog">
+    </footer>
     <script>
         document.querySelectorAll('.clickable-image').forEach(image => {
             image.addEventListener('click', () => {
