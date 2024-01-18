@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob is 50!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 700px) { /* Adjust the max-width as needed */
+    body {
+        width: 100%;
+    }
+}
+
+p {
+    font-size: 1.3rem;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(233, 223, 211);
+}
+section img {
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    margin: 20px;
+}
+
+.introduction {
+    font-weight: bold;
+    padding: 20px;
+    background-color: #3c7408; /* Light background for the introduction */
+    color: azure;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.article {
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article > * {
+    width: 80%;
+}
+.home-button {
+    text-decoration: none; /* Removes underline */
+    padding: 10px 15px; /* Add padding */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 4px solid white;
+    
+}
+
+.home-button:hover {
+    background-color: #ffffff; /* Darker shade on hover */
+    color: #007bff;
+    border: 4px solid #007bff;
+}
+
+.quote-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-bottom: 5px;
+}
+
+.quote {
+    font-size: 1.5em;
+    line-height: 1.4;
+    color: #333;
+    quotes: "“" "”" "‘" "’";
+}
+
+.quote:before {
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    color: #7f8c8d;
+}
+
+.quote:after {
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+    color: #7f8c8d;
+}
+
+.signature {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #23a029;
+}
+</style>
+<body>
+
+    <section>
+        <a class="home-button" href="index.html">
+            HOME
+        </a>
+        <img src="celebs.png" alt="">
+    </section>
+    <section class="introduction">
+        <p>As you step into this glittering age of golden wisdom, it turns out you're in fantastic company. That's right, even the stars in Hollywood and beyond are lining up to welcome you to the club. They've been where you are, and they've got some pearls of wisdom, a few chuckles, and maybe even a wrinkle or two of advice just for you. So, grab your reading glasses (we know you have them), sit back, and let's hear what these familiar faces have to say about hitting the big five-oh!</p>
+    </section>
+    <section class="article">
+        <div class="quote-section">
+            <blockquote class="quote">
+                "50 years: here’s a time when you have to separate yourself from what other people expect of you and do what you love. Because if you find yourself 50 years old and you aren’t doing what you love, then what’s the point?"
+            </blockquote>
+            <cite class="signature">- Jim Carey</cite>
+        </div>
+
+        <div class="quote-section">
+            <blockquote class="quote">
+                "The face you have at age twenty-five is the face God gave you, but the face you have after fifty is the face you earned"
+            </blockquote>
+            <cite class="signature">- Cindy Crawford</cite>
+        </div>
+
+        <div class="quote-section">
+            <blockquote class="quote">
+                "The man who views the world at fifty the same as he did at twenty has wasted thirty years of his life"
+            </blockquote>
+            <cite class="signature">- Muhammad Ali</cite>
+        </div>
+
+        <div class="quote-section">
+            <blockquote class="quote">
+                "With open arms I welcome 50... I’m so blessed to be here!"
+            </blockquote>
+            <cite class="signature">- Halle Berry</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "It’s hard for me to think of myself at this age, but I’m doing everything I wanted to do"
+            </blockquote>
+            <cite class="signature">- Pamela Anderson</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "I have enjoyed greatly the second blooming… suddenly you find – at the age of 50, say – that a whole new life has opened before you"
+            </blockquote>
+            <cite class="signature">- Agatha Christie</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "By the time we hit 50, we have learned our hardest lessons. We have found out that only a few things are really important. We have learned to take life seriously, but never ourselves."
+            </blockquote>
+            <cite class="signature">- Marie Dressler</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "We don't stop playing because we grow old; we grow old because we stop playing."
+            </blockquote>
+            <cite class="signature">- George Bernard Shaw</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "I always knew that good stuff would come along when I was older. So when I was 18, I longed to be 30; when I was 30, I longed to be 50. I've always looked forward to my next birthday"
+            </blockquote>
+            <cite class="signature">- Joanna Lumley</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "There is a fountain of youth: it is your mind, your talents, the creativity you bring to your life and the lives of the people you love. When you learn to tap this source, you will have truyly defeated age. "
+            </blockquote>
+            <cite class="signature">- Sophia Loren</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "Anyone who keeps the ability to see beauty never grows old"
+            </blockquote>
+            <cite class="signature">- Frans Kafka</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "Forty is the old age of youth, fifty is the youth of old age"
+            </blockquote>
+            <cite class="signature">- Victor Hugo</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "Just because a woman is over fifty does not mean she no longer has anything to offer. If anything, we have so much more to offer! We have lived life, we get better with age. I do my best work now in my 60s. Sure, I could retire; but what would I do? Play Bingo? I think not!"
+            </blockquote>
+            <cite class="signature">- Dawn Wells</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "Age is whatever you think it is. You are as old as you think you are."
+            </blockquote>
+            <cite class="signature">- Muhammad Ali </cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "You are never too old to set another goal or to dream a new dream"
+            </blockquote>
+            <cite class="signature">- Les Brown</cite>
+        </div>
+        <div class="quote-section">
+            <blockquote class="quote">
+                "Age is an issue of mind over matter. If you don’t mind, it doesn’t matter"
+            </blockquote>
+            <cite class="signature">- Mark Twain</cite>
+        </div>
+    </section>
+</body>
+</html>
