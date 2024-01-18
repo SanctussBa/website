@@ -32,11 +32,18 @@
         }
         header {
             backdrop-filter: blur(10px);
-            color: white;
+            
             text-align: center;
             padding: 1em 0;
             text-shadow: 1px 3px 7px rgba(22, 24, 22, 0.6);
             border: 3px solid #ffffff;
+            font-size: 2em;
+            color: #FFF; /* Or any other contrasting color */
+    text-shadow:
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
         }
 
 
@@ -75,6 +82,7 @@
         }
         .pics-header img {
             display: flex;
+            flex-direction: row;
             height: 10rem;
             flex-wrap: wrap;
 
@@ -255,7 +263,7 @@ h3 {
         <img src="party.gif" alt="Popup Image" class="popup-image2">
     </div>
     <header>
-        <h1>Welcome to "The Half-Century Handbook: A Not-So-Serious Survival Guide for the 50-Something"!</h1>
+        <h1>Welcome to "The Half-Century Handbook: A Survival Guide for the 50-Something"!</h1>
         <div class="buttons-2">
             <a class="cake-button" href="#" id="imageLink">
                 <span class="btn">CLICK HERE</span><span class="btn">TO SEE YOUR BIRTHDAY CAKE</span> </a>
@@ -271,6 +279,7 @@ h3 {
             <img  class="neon-border clickable-image" src="pic_1.png" alt="pic1">
             <img class="neon-border clickable-image" src="pic_2.png" alt="pic2">
             <img class="neon-border clickable-image" src="pic_3.png" alt="pic3">
+            <img class="neon-border clickable-image" src="pic_4.jpg" alt="pic4">
 
         </div>
     </section>
@@ -343,9 +352,9 @@ h3 {
             </a>
         </div>
         <div class="grid-item tile">
-            <a href="detail.html">
-                <img src="glasses.jpeg" alt="Tile Image">
-                <h3>Help - My lens is falling out! How to Fix!</h3>
+            <a href="article-young.html">
+                <img src="young.png" alt="Tile Image">
+                <h3>A Beginner's Guide to Pretending You're Still 30</h3>
             </a>
         </div>
         <!-- ... -->
