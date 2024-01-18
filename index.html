@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Static Website</title>
+    <title>Gefeliciteerd Rob!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,6 +36,7 @@
             text-align: center;
             padding: 1em 0;
             text-shadow: 1px 3px 7px rgba(22, 24, 22, 0.6);
+            border: 3px solid #ffffff;
         }
 
 
@@ -119,7 +120,11 @@ h3 {
     font-weight: bold;
     border: 3px solid #ffffff;
     border-radius: 7px;
-    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* For center alignment */
+    font-size: 1.5rem;
+    max-width: 50%;
 }
 
 .cake-button:hover {
@@ -127,6 +132,21 @@ h3 {
     color: white;
 }
 
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #befa5c, 0 0 10px #dd5151, 0 0 15px #42c9db, 0 0 20px #c4e725, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+    }
+    100% {
+        text-shadow: 0 0 20px #aae045, 0 0 30px #5cc2cf, 0 0 40px #caac24, 0 0 50px #617bd1, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+.btn {
+    /* Your existing styles */
+    animation: glow 0.3s ease-in-out infinite alternate;
+    
+}
 .tile {
     width: 300px; /* Adjust as needed */
     border-radius: 7px;
@@ -169,11 +189,16 @@ h3 {
     z-index: 10; /* Ensure it's above other content */
     position: relative; /* Needed for z-index to take effect */
 }
-span {
+.emoji {
     font-size: 4rem;
 }
+
+.btn {
+    font-size: 1.6rem;
+    
+}
 /* Style for the popup background */
-.popup {
+.popup, .popup2 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -187,7 +212,7 @@ span {
 }
 
 /* Popup image */
-.popup-image {
+.popup-image, .popup-image2 {
     margin: auto;
     display: block;
     width: 100%; /* Adjust as needed */
@@ -195,7 +220,7 @@ span {
 }
 
 /* The Close Button */
-.close {
+.close, .close2 {
     position: absolute;
     background-color: #FFFFFF;
     top: 20px;
@@ -207,7 +232,12 @@ span {
     padding: 10px;
 }
 
-
+.buttons-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
     </style>
 
 </head>
@@ -216,12 +246,22 @@ span {
         <span class="close">X</span>
         <img src="cake.png" alt="Popup Image" class="popup-image">
     </div>
+    <div id="imagePopup2" class="popup2">
+        <span class="close2">X</span>
+        <img src="party.gif" alt="Popup Image" class="popup-image2">
+    </div>
     <header>
         <h1>Welcome to "The Half-Century Handbook: A Not-So-Serious Survival Guide for the 50-Something"!</h1>
-        <a class="cake-button" href="#" id="imageLink">CLICK HERE TO SEE YOUR BIRTHDAY CAKE</a>
+        <div class="buttons-2">
+            <a class="cake-button" href="#" id="imageLink">
+                <span class="btn">CLICK HERE</span><span class="btn">TO SEE YOUR BIRTHDAY CAKE</span> </a>
+            <a class="cake-button" href="#" id="imageLink2">
+                <span class="btn">CLICK HERE</span><span class="btn">TO SEE YOUR BIRTHDAY PARTY</span> </a>
+        </div>
+
     </header>
     <section>
-        <h3>Gefeliciteerd Rob! <span>&#129395;</span> You've hit the big 5-0, a milestone that deserves a standing ovation (and maybe a little sit-down afterward, because let's be honest, standing up for too long can be overrated at this age). This handbook is your go-to guide for navigating the wonderful, wacky world of your 50s – with style, humor, and maybe a touch of sarcasm.</h3>
+        <h3>Gefeliciteerd Rob! <span class="emoji">&#129395;</span> You've hit the big 5-0, a milestone that deserves a standing ovation (and maybe a little sit-down afterward, because let's be honest, standing up for too long can be overrated at this age). This handbook is your go-to guide for navigating the wonderful, wacky world of your 50s – with style, humor, and maybe a touch of sarcasm.</h3>
         <br>
         <div class="pics-header">
             <img  class="neon-border clickable-image" src="pic_1.png" alt="pic1">
@@ -339,7 +379,38 @@ span {
                 popup.style.display = "none";
             }
         }
+
+
+
+
+
+           // Get the modal
+           var popup2 = document.getElementById('imagePopup2');
+        
+        // Get the button that opens the modal
+        var btn2 = document.getElementById('imageLink2');
+    
+        // Get the <span> element that closes the modal
+        var span2 = document.getElementsByClassName('close2')[0];
+    
+        // When the user clicks the button, open the modal 
+        btn2.onclick = function() {
+            popup2.style.display = "block";
+        }
+    
+        // When the user clicks on <span> (x), close the modal
+        span2.onclick = function() {
+            popup2.style.display = "none";
+        }
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === popup2) {
+                popup2.style.display = "none";
+            }
+        }
     </script>
+
     
 </body>
 </html>
